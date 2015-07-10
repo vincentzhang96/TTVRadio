@@ -1,5 +1,9 @@
 #TTVRadio
 
+[![GitHub release](https://img.shields.io/github/release/vincentzhang96/TTVRadio.svg?style=flat-square)](https://github.com/vincentzhang96/TTVRadio/releases/latest)
+[![Travis](https://img.shields.io/travis/vincentzhang96/TTVRadio.svg?style=flat-square)](https://travis-ci.org/vincentzhang96/TTVRadio)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/vincentzhang96/TTVRadio/blob/master/LICENSE)
+
 **TTVRadio** is a desktop application for listening to streams on Twitch without the overhead of decoding and 
 rendering video. For streams that support it, TwitchRadio will utilize the audio-only stream, reducing the bandwidth 
 consumed.
