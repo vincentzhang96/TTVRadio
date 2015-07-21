@@ -9,7 +9,7 @@ public interface Validatable<T extends Throwable> {
 
     /**
      * Performs validation on this object by means of self-introspection. If at least one of the object's fields are
-     * determined to be invalid, an exception of type T is thrown.
+     * determined to be invalid and is unable to be automatically fixed, an exception of type T is thrown.
      * @throws T If validation failed
      */
     void validate() throws T;
