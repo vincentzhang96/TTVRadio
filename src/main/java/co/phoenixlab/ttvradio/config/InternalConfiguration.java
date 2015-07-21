@@ -1,8 +1,12 @@
 package co.phoenixlab.ttvradio.config;
 
+import co.phoenixlab.ttvradio.util.validate.Validatable;
+
 import java.nio.file.Path;
 
-public class InternalConfiguration {
+import static co.phoenixlab.ttvradio.util.U.isNullOrTrimmedEmpty;
+
+public class InternalConfiguration implements Validatable<InvalidConfigException> {
 
     /**
      * Path to the root FXML file in the JAR
@@ -42,5 +46,18 @@ public class InternalConfiguration {
      */
     public Path getRelativePathToUserConfig() {
         return relativePathToUserConfig;
+    }
+
+    @Override
+    public void validate() throws InvalidConfigException {
+        if (isNullOrTrimmedEmpty(fxmlJarPath)) {
+            throw new InvalidConfigException("FXML Jar Path cannot be null or empty");
+        }
+        if (isNullOrTrimmedEmpty(fxmlResourceBundleClassName)) {
+            throw new InvalidConfigException("FXML Resource Bundle Class Name cannot be null or empty");
+        }
+        if (relativePathToUserConfig == null || relativePathToUserConfig.getNameCount() == 0) {
+            throw new InvalidConfigException("Relative Path to User Config cannot be null or empty");
+        }
     }
 }
