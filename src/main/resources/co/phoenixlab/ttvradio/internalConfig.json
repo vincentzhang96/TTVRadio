@@ -1,0 +1,5 @@
+{
+  "fxmlJarPath":"/co/phoenixlab/ttvradio/fxml/main.fxml",
+  "fxmlResourceBundleClassName":"co.phoenixlab.ttvradio.bundles.MainResourceBundle",
+  "relativePathToUserConfig":"config.json"
+}
